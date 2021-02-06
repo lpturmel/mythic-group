@@ -38,6 +38,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
       props: {
           players: resArray
-      }
+      },
+      revalidate: 300
   }
 }

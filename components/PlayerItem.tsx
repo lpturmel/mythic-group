@@ -60,7 +60,7 @@ const PlayerItem: React.FunctionComponent<PlayerItemProps> = ({ player }) => {
                                                 <Image w={9} h={9} size="sm" borderRadius={2}  src={`https://wow.zamimg.com/images/wow/icons/large/${player.gear.items[slotType].icon}.jpg`} />
 
                                                 
-                                                <Text color="#a335ee">
+                                                <Text color={! player.gear.items[slotType].is_legendary ? "#a335ee" : "#ff8000"}>
                                                     {player.gear.items[slotType].item_level}
                                                 </Text>
                                             </Box>

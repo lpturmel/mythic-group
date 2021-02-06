@@ -1,4 +1,4 @@
-import { Accordion, AccordionButton, Image, AccordionIcon, AccordionItem, AccordionPanel, Avatar, Box, HStack, Link, Text, VStack, Center, Badge } from '@chakra-ui/react';
+import { Accordion, AccordionButton, Image, AccordionItem, AccordionPanel, Avatar, Box, HStack, Link, Text, VStack, Center, Badge } from '@chakra-ui/react';
 import React from 'react';
 import Player from '../types/Player';
 import urls from '../urls.json';

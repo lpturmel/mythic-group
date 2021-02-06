@@ -1,13 +1,12 @@
 import Head from '../components/Head';
-import { Center, Heading, HStack, Text } from '@chakra-ui/react';
+import { Center, Heading, HStack } from '@chakra-ui/react';
 import Players from '../components/Players';
 import playersData from '../players.json';
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import urls from '../urls.json';
 import React from 'react';
 
 export default function Home({ players }) {
-  console.log(players);
   return (
     <div>
       <Head />

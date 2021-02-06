@@ -1,8 +1,6 @@
-import { Avatar, Box, Center, Link, Text, VStack, Image, HStack } from '@chakra-ui/react';
-import { generateKeyPair } from 'crypto';
+import { Box, Center, VStack } from '@chakra-ui/react';
 import React from 'react';
 import Player from '../types/Player';
-import urls from '../urls.json';
 import PlayerItem from './PlayerItem';
 
 export interface PlayersProps {

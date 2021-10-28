@@ -9,7 +9,7 @@ const RoleIcon: React.FunctionComponent<RoleIconProps> = ({ role }) => {
 		healer: "https://cdnassets.raider.io/assets/img/role_healer-984e5e9867d6508a714a9c878d87441b.png",
 		tank: "https://cdnassets.raider.io/assets/img/role_tank-6cee7610058306ba277e82c392987134.png",
 	};
-	return <img className="w-6 h-6" src={urls[role]} />;
+	return <img width="24px" height="24px" alt={role} srcSet={urls[role]} />;
 };
 
 export default RoleIcon;

@@ -1,3 +1,4 @@
+import { Dungeon } from "./Dungeon";
 import Gear from "./Gear";
 
 export default interface Player {
@@ -22,9 +23,12 @@ export default interface Player {
 	};
 	name: string;
 	profile_banner: string;
+	mythic_plus_weekly_highest_level_runs: Dungeon[];
 	profile_url: string;
 	race: string;
 	realm: string;
 	region: string;
 	thumbnail_url: string;
 }
+
+export type DungeonRole = "tank" | "healer" | "dps";

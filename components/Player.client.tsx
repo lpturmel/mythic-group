@@ -1,7 +1,6 @@
-import { FunctionComponent, Suspense } from "react";
-import Player from "../types/Player";
+import { FunctionComponent } from "react";
 import { fetchPlayerData } from "../utils/Api";
-import useData, { playerList } from "../utils/player";
+import useData from "../utils/player";
 import PlayerItem from "./PlayerItem.client";
 
 export interface PlayersProps {
@@ -20,11 +19,7 @@ const Players: FunctionComponent<PlayersProps> = ({ player }) => {
 			region: player.region,
 		})
 	);
-	console.log(playerData);
-	return (
-		<div>
-			<PlayerItem player={playerData} />
-		</div>
-	);
+
+	return <PlayerItem player={playerData} />;
 };
 export default Players;

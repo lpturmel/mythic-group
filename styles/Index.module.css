@@ -1,0 +1,10 @@
+.hstack {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.vstack {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

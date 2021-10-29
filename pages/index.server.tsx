@@ -47,7 +47,7 @@ const PlayerLoader: FunctionComponent<PlayersProps> = ({ player }) => {
 
 	return (
 		<Suspense fallback={<p>Loading...</p>}>
-			<PlayerItem player={playerData} />;
+			<PlayerItem player={playerData} />
 		</Suspense>
 	);
 };

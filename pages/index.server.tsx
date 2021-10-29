@@ -1,7 +1,9 @@
-import Head from "../components/Head.server";
-import PlayerLoader from "../components/Player.client";
+import Head from "../components/Head.client";
 import { playerList } from "../utils/player";
-import { Suspense } from "react";
+import { Suspense, FunctionComponent } from "react";
+import { fetchPlayerData } from "../utils/Api";
+import useData from "../utils/player";
+import PlayerItem from "../components/PlayerItem.client";
 
 export default function Home() {
 	return (
@@ -25,3 +27,27 @@ export default function Home() {
 		</div>
 	);
 }
+
+export interface PlayersProps {
+	player: {
+		realm: string;
+		characterName: string;
+		region: string;
+	};
+}
+
+const PlayerLoader: FunctionComponent<PlayersProps> = ({ player }) => {
+	const playerData = useData(player.characterName, () =>
+		fetchPlayerData({
+			characterName: player.characterName,
+			realm: player.realm,
+			region: player.region,
+		})
+	);
+
+	return (
+		<Suspense fallback={<p>Loading...</p>}>
+			<PlayerItem player={playerData} />;
+		</Suspense>
+	);
+};

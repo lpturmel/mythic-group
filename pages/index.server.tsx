@@ -14,7 +14,7 @@ export default function Home() {
 				<p className="text-white">Mythic+</p>
 				<p className="text-green-400"> Team </p>
 			</div>
-			<div className="flex flex-col w-full space-y-4 items-center">
+			<div className="flex flex-col w-full space-y-4 items-center min-h-[684px]">
 				{playerList.map((player) => (
 					<Suspense
 						fallback={<p>Loading...</p>}
@@ -47,7 +47,7 @@ const PlayerLoader: FunctionComponent<PlayersProps> = ({ player }) => {
 
 	return (
 		<Suspense fallback={<p>Loading...</p>}>
-			<PlayerItem player={playerData} />;
+			<PlayerItem player={playerData} />
 		</Suspense>
 	);
 };

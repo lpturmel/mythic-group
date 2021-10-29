@@ -4,6 +4,7 @@ import { Suspense, FunctionComponent } from "react";
 import { fetchPlayerData } from "../utils/Api";
 import useData from "../utils/player";
 import PlayerItem from "../components/PlayerItem.client";
+import Spinner from "../components/Spinner";
 
 export default function Home() {
 	return (
@@ -14,12 +15,10 @@ export default function Home() {
 				<p className="text-white">Mythic+</p>
 				<p className="text-green-400"> Team </p>
 			</div>
+
 			<div className="flex flex-col w-full space-y-4 items-center min-h-[684px]">
 				{playerList.map((player) => (
-					<Suspense
-						fallback={<p>Loading...</p>}
-						key={player.characterName}
-					>
+					<Suspense fallback={<Spinner />} key={player.characterName}>
 						<PlayerLoader player={player} />
 					</Suspense>
 				))}
@@ -46,7 +45,7 @@ const PlayerLoader: FunctionComponent<PlayersProps> = ({ player }) => {
 	);
 
 	return (
-		<Suspense fallback={<p>Loading...</p>}>
+		<Suspense fallback={<Spinner />}>
 			<PlayerItem player={playerData} />
 		</Suspense>
 	);

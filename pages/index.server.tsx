@@ -7,7 +7,7 @@ import PlayerItem from "../components/PlayerItem.client";
 
 export default function Home() {
 	return (
-		<div className="bg-gray-900 w-full h-screen flex flex-col justify-center items-center space-y-8 p-4">
+		<div className="bg-gray-900 w-full min-h-screen flex flex-col justify-center items-center space-y-8 p-4">
 			<Head />
 
 			<div className="flex flex-row space-x-2 text-3xl font-bold">

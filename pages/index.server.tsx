@@ -43,7 +43,7 @@ const PlayerLoader: FunctionComponent<PlayersProps> = ({ player }) => {
 			region: player.region,
 		})
 	);
-	console.log(playerData);
+
 	return (
 		<Suspense fallback={<Spinner />}>
 			<PlayerItem player={playerData} />

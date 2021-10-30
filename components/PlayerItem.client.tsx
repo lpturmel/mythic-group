@@ -2,6 +2,7 @@ import { FunctionComponent } from "react";
 import Player, { DungeonRole } from "../types/Player";
 import { RAIDER_IO_URL } from "../utils/Api";
 import { getPlayerScoreColor } from "../utils/player";
+import CovenantIcon from "./CovenantIcon";
 import RoleIcon from "./RoleIcon";
 
 export interface PlayerItemProps {
@@ -38,6 +39,7 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
 					srcSet={player.thumbnail_url}
 					className="rounded-full ring-2 ring-gray-600"
 				/>
+
 				<a
 					href={RAIDER_IO_URL + player.realm + "/" + player.name}
 					target="_blank"
@@ -47,6 +49,13 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
 						{player.name}
 					</p>
 				</a>
+				<CovenantIcon covenant={player.covenant.name} />
+
+				<div className="absolute left-20 bottom-2 flex flex-row space-x-4">
+					<p className="text-gray-400 text-sm truncate font-semibold">
+						Renown {player.covenant.renown_level}
+					</p>
+				</div>
 			</div>
 		</div>
 		// <Accordion allowMultiple w="300px" maxWidth="600px">

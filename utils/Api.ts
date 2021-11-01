@@ -13,6 +13,6 @@ export const fetchPlayerData = async (
 ): Promise<Player> => {
 	return fetch(
 		RAIDER_IO_BASE_URL +
-			`characters/profile?region=${options.region}&realm=${options.realm}&name=${options.characterName}&fields=mythic_plus_scores,mythic_plus_weekly_highest_level_runs,gear,covenant`
+			`characters/profile?region=${options.region}&realm=${options.realm}&name=${options.characterName}&fields=mythic_plus_scores,mythic_plus_weekly_highest_level_runs,gear,covenant,mythic_plus_best_runs:current`
 	).then((res) => res.json());
 };

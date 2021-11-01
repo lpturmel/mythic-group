@@ -38,4 +38,4 @@ export default interface Player {
 	thumbnail_url: string;
 }
 
-export type DungeonRole = "tank" | "healer" | "dps";
+export type DungeonRole = "TANK" | "HEALING" | "DPS";

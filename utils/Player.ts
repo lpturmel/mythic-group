@@ -2,13 +2,16 @@ import Player from "../types/Player";
 import { fetchPlayerData } from "./Api";
 import colors from "./Colors";
 
+
 export function inRange(x: number, min: any, max: any) {
 	return (x - min) * (x - max) <= 0;
 }
 
 export const getPlayerScoreColor = (player: Player) => {
 	var hexColor: string = "";
+
 	if (!player.mythic_plus_scores) return "";
+
 	colors.forEach((color, index) => {
 		if (
 			inRange(

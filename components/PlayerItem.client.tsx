@@ -2,10 +2,10 @@ import { FunctionComponent } from "react";
 import Player, { DungeonRole } from "../types/Player";
 import { RAIDER_IO_URL } from "../utils/Api";
 import { getPlayerScoreColor } from "../utils/player";
-import CovenantIcon from "./CovenantIcon.client";
+import CovenantIcon from "./CovenantIcon";
 import RoleIcon from "./RoleIcon.client";
 
-import DungeonPanel from "./DungeonPanel.client";
+import DungeonPanel from "./DungeonPanel";
 export interface PlayerItemProps {
 	player: Player;
 }

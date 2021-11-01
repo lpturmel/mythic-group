@@ -1,6 +1,6 @@
 import { Dungeon } from "../types/Dungeon";
 import { FunctionComponent } from "react";
-import DungeonItem from "./DungeonItem";
+import DungeonItem from "./DungeonItem.client";
 import { sortDungeons } from "../utils/Dungeons";
 
 export interface DungeonPanelProps {

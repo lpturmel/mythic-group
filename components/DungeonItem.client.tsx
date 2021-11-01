@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { Dungeon } from "../types/Dungeon";
-import DungeonIcon from "./DungeonIcon";
+import DungeonIcon from "./DungeonIcon.client";
 
 export interface DungeonItemProps {
 	dungeon: Dungeon;

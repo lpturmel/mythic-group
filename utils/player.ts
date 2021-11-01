@@ -8,6 +8,7 @@ export function inRange(x: number, min: any, max: any) {
 
 export const getPlayerScoreColor = (player: Player) => {
 	var hexColor: string = "";
+	if (!player.mythic_plus_scores) return "";
 	colors.forEach((color, index) => {
 		if (
 			inRange(
@@ -45,6 +46,22 @@ export const playerList = [
 	{
 		realm: "Zul'Jin",
 		characterName: "Feljester",
+		region: "us",
+	},
+	{
+		realm: "Zul'jin",
+		characterName: "GhostJester",
+		region: "us",
+	},
+
+	{
+		realm: "Zul'jin",
+		characterName: "Nerfwindw",
+		region: "us",
+	},
+	{
+		realm: "Zul'jin",
+		characterName: "HealJester",
 		region: "us",
 	},
 	{

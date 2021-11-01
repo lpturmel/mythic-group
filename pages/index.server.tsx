@@ -1,4 +1,3 @@
-import Head from "../components/Head.client";
 import { playerList } from "../utils/player";
 import { Suspense, FunctionComponent } from "react";
 import { fetchPlayerData } from "../utils/Api";
@@ -9,8 +8,6 @@ import Spinner from "../components/Spinner";
 export default function Home() {
 	return (
 		<div className="bg-gray-900 w-full min-h-screen flex flex-col justify-center items-center space-y-8 p-4">
-			<Head />
-
 			<div className="flex flex-row space-x-2 text-3xl font-bold">
 				<p className="text-white">Mythic+</p>
 				<p className="text-green-400"> Team </p>
@@ -43,7 +40,6 @@ const PlayerLoader: FunctionComponent<PlayersProps> = ({ player }) => {
 			region: player.region,
 		})
 	);
-
 	return (
 		<Suspense fallback={<Spinner />}>
 			<PlayerItem player={playerData} />

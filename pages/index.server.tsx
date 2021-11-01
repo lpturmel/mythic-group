@@ -4,23 +4,30 @@ import { fetchPlayerData } from "../utils/Api";
 import useData from "../utils/Player";
 import PlayerItem from "../components/PlayerItem.client";
 import Spinner from "../components/Spinner";
+import Head from "../components/Head";
 
 export default function Home() {
 	return (
-		<div className="bg-gray-900 w-full min-h-screen flex flex-col justify-center items-center space-y-8 p-4">
-			<div className="flex flex-row space-x-2 text-3xl font-bold">
-				<p className="text-white">Mythic+</p>
-				<p className="text-green-400"> Team </p>
-			</div>
+		<>
+			<Head />
+			<div className="bg-gray-900 w-full min-h-screen flex flex-col justify-center items-center space-y-8 p-4">
+				<div className="flex flex-row space-x-2 text-3xl font-bold">
+					<p className="text-white">Mythic+</p>
+					<p className="text-green-400"> Team </p>
+				</div>
 
-			<div className="flex flex-col w-full space-y-4 items-center min-h-[684px]">
-				{playerList.map((player) => (
-					<Suspense fallback={<Spinner />} key={player.characterName}>
-						<PlayerLoader player={player} />
-					</Suspense>
-				))}
+				<div className="flex flex-col w-full space-y-4 items-center min-h-[684px]">
+					{playerList.map((player) => (
+						<Suspense
+							fallback={<Spinner />}
+							key={player.characterName}
+						>
+							<PlayerLoader player={player} />
+						</Suspense>
+					))}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 

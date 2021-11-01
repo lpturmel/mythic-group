@@ -1,10 +1,10 @@
+import { FunctionComponent } from "react";
+
 export interface CovenantIconProps {
 	covenant: "Kyrian" | "Necrolord" | "Venthyr" | "Night Fae";
 }
 
-const CovenantIcon: React.FunctionComponent<CovenantIconProps> = ({
-	covenant,
-}) => {
+const CovenantIcon: FunctionComponent<CovenantIconProps> = ({ covenant }) => {
 	const urls = {
 		Kyrian: "https://cdnassets.raider.io/images/sl/covenants/sigil_1.png",
 		Venthyr: "https://cdnassets.raider.io/images/sl/covenants/sigil_2.png",

@@ -1,7 +1,7 @@
-import { playerList } from "../utils/player";
+import { playerList } from "../utils/Player";
 import { Suspense, FunctionComponent } from "react";
 import { fetchPlayerData } from "../utils/Api";
-import useData from "../utils/player";
+import useData from "../utils/Player";
 import PlayerItem from "../components/PlayerItem.client";
 import Spinner from "../components/Spinner";
 

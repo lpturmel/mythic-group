@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import Player, { DungeonRole } from "../types/Player";
 import { RAIDER_IO_URL } from "../utils/Api";
-import { getPlayerScoreColor } from "../utils/player";
+import { getPlayerScoreColor } from "../utils/Player";
 import CovenantIcon from "./CovenantIcon";
 import RoleIcon from "./RoleIcon.client";
 

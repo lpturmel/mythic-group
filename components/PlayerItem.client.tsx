@@ -58,8 +58,9 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
 								{player.name}
 							</p>
 						</a>
-						<CovenantIcon covenant={player.covenant.name} />
-
+						<div className="absolute bottom-0">
+							<CovenantIcon covenant={player.covenant.name} />
+						</div>
 						<div className="absolute left-20 bottom-2 flex flex-row space-x-4">
 							<p className="text-gray-400 text-sm truncate font-semibold">
 								Renown {player.covenant.renown_level}

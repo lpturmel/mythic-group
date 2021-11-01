@@ -21,23 +21,21 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
 						style={{ color: scoreColor }}
 						className="absolute top-2 right-4 font-semibold bg-gray-900 px-2 py-1 min-w-[56px] border-2 border-gray-600 text-center rounded-md"
 					>
-						{Math.round(player.mythic_plus_scores.all)}
+						{Math.round(player.mythic_plus_scores?.all)}
 					</p>
 					<div className="font-semibold absolute bottom-2 right-4 flex flex-row space-x-2">
 						<p className="text-gray-200">weekly</p>
 						<p className="text-white">
 							{
 								player.mythic_plus_weekly_highest_level_runs
-									.length
+									?.length
 							}
 							/10
 						</p>
 					</div>
 					<div className="absolute top-[-10px] left-[-10px]">
 						<RoleIcon
-							role={
-								player.active_spec_role.toLowerCase() as DungeonRole
-							}
+							role={player.active_spec_role as DungeonRole}
 						/>
 					</div>
 					<div className="flex flex-row space-x-4 text-xl  items-center">

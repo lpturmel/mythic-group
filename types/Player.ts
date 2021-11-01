@@ -1,5 +1,5 @@
-import { Dungeon } from "./Dungeon";
 import Gear from "./Gear";
+import { Dungeon } from "./Dungeon";
 
 export default interface Player {
 	achievement_points: number;

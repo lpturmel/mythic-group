@@ -1,6 +1,7 @@
 import Player from "../types/Player";
 import { fetchPlayerData } from "./Api";
-import colors from "./colors";
+import colors from "./Colors";
+
 
 export function inRange(x: number, min: any, max: any) {
 	return (x - min) * (x - max) <= 0;
@@ -8,6 +9,9 @@ export function inRange(x: number, min: any, max: any) {
 
 export const getPlayerScoreColor = (player: Player) => {
 	var hexColor: string = "";
+
+	if (!player.mythic_plus_scores) return "";
+
 	colors.forEach((color, index) => {
 		if (
 			inRange(
@@ -47,6 +51,22 @@ export const playerList = [
 		characterName: "Feljester",
 		region: "us",
 	},
+	// {
+	// 	realm: "Zul'jin",
+	// 	characterName: "GhostJester",
+	// 	region: "us",
+	// },
+
+	// {
+	// 	realm: "Zul'jin",
+	// 	characterName: "Nerfwindw",
+	// 	region: "us",
+	// },
+	// {
+	// 	realm: "Zul'jin",
+	// 	characterName: "HealJester",
+	// 	region: "us",
+	// },
 	{
 		realm: "Zul'Jin",
 		characterName: "Fashog",

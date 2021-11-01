@@ -4,7 +4,7 @@ import { Affix } from "./Affix";
 
 export interface Dungeon {
 	dungeon: string;
-	short_name: string;
+	short_name: DungeonNames;
 	mythic_level: number;
 	completed_at: string;
 	clear_time_ms: number;
@@ -16,3 +16,13 @@ export interface Dungeon {
 	affixes: Affix[];
 	url: string;
 }
+
+export type DungeonNames =
+	| "DOS"
+	| "TOP"
+	| "SOA"
+	| "SD"
+	| "PF"
+	| "NW"
+	| "MISTS"
+	| "HOA";

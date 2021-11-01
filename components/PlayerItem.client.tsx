@@ -70,9 +70,9 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
 					</div>
 				</div>
 			</summary>
-			{/* <main className="p-4">
+			<main className="p-4">
 				<DungeonPanel dungeons={player.mythic_plus_best_runs} />
-			</main> */}
+			</main>
 		</details>
 	);
 };

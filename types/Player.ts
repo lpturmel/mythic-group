@@ -11,11 +11,13 @@ export default interface Player {
 	gender: string;
 	honorable_kills: number;
 	last_crawled_at: string;
+	mythic_plus_best_runs: Dungeon[];
 	covenant: {
 		id: number;
 		name: "Kyrian" | "Necrolord" | "Venthyr" | "Night Fae";
 		renown_level: number;
 	};
+
 	mythic_plus_scores: {
 		all: number;
 		dps: number;

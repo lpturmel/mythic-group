@@ -9,7 +9,7 @@ export interface DungeonItemProps {
 const DungeonItem: FunctionComponent<DungeonItemProps> = ({ dungeon }) => {
 	return (
 		<div className="flex  flex-row space-x-4 text-white">
-			<DungeonIcon dungeon={dungeon.short_name} />
+			{/* <DungeonIcon dungeon={dungeon.short_name} /> */}
 			<p className="font-bold">{dungeon.short_name} </p>
 			<p>{dungeon.mythic_level}</p>
 		</div>

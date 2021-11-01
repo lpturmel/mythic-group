@@ -8,10 +8,10 @@ export interface DungeonPanelProps {
 }
 
 const DungeonPanel: FunctionComponent<DungeonPanelProps> = ({ dungeons }) => {
-	//const sortedDungeons = sortDungeons(dungeons);
+	const sortedDungeons = sortDungeons(dungeons);
 	return (
 		<div className="flex flex-col space-y-4">
-			{dungeons.map((dungeon) => (
+			{sortedDungeons.map((dungeon) => (
 				<DungeonItem key={dungeon.zone_id} dungeon={dungeon} />
 			))}
 		</div>

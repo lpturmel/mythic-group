@@ -73,7 +73,7 @@ export const playerList = [
 	},
 	{
 		realm: "Zul'Jin",
-		characterName: "Xaviotron",
+		characterName: "Vidéotron",
 		region: "us",
 	},
 	{

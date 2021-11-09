@@ -68,7 +68,7 @@ export const playerList = [
 	// },
 	{
 		realm: "Zul'Jin",
-		characterName: "Fashog",
+		characterName: "Grospoilu",
 		region: "us",
 	},
 	{

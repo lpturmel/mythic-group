@@ -10,9 +10,9 @@
 		"export": "next export"
 	},
 	"dependencies": {
-		"next": "12.0.2",
-		"react": "^18.0.0-alpha-a0d991fe6-20211031",
-		"react-dom": "^18.0.0-alpha-a0d991fe6-20211031"
+		"next": "^12.0.3",
+		"react": "^18.0.0-alpha-327d5c484-20211106",
+		"react-dom": "^18.0.0-alpha-327d5c484-20211106"
 	},
 	"devDependencies": {
 		"@types/node": "16.11.6",

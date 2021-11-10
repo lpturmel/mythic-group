@@ -50,11 +50,11 @@ export const playerList = [
 		characterName: "Feljester",
 		region: "us",
 	},
-	{
-		realm: "Zul'jin",
-		characterName: "Holysheësh",
-		region: "us",
-	},
+	// {
+	// 	realm: "Zul'jin",
+	// 	characterName: "Holysheësh",
+	// 	region: "us",
+	// },
 
 	// {
 	// 	realm: "Zul'jin",
@@ -71,16 +71,16 @@ export const playerList = [
 		characterName: "Grospoilu",
 		region: "us",
 	},
-	{
-		realm: "Zul'Jin",
-		characterName: "Vidéotron",
-		region: "us",
-	},
-	{
-		realm: "Zul'Jin",
-		characterName: "Exenas",
-		region: "us",
-	},
+	// {
+	// 	realm: "Zul'Jin",
+	// 	characterName: "Vidéotron",
+	// 	region: "us",
+	// },
+	// {
+	// 	realm: "Zul'Jin",
+	// 	characterName: "Exenas",
+	// 	region: "us",
+	// },
 	{
 		realm: "Zul'jin",
 		characterName: "Gniatsayle",

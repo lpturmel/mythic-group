@@ -50,11 +50,11 @@ export const playerList = [
 		characterName: "Feljester",
 		region: "us",
 	},
-	{
-		realm: "Zul'jin",
-		characterName: "Holysheësh",
-		region: "us",
-	},
+	// {
+	// 	realm: "Zul'jin",
+	// 	characterName: "Holysheësh",
+	// 	region: "us",
+	// },
 	{
 		realm: "Zul'Jin",
 		characterName: "Grospoilu",

@@ -56,16 +56,16 @@ export const playerList = [
 	// 	region: "us",
 	// },
 
-	// {
-	// 	realm: "Zul'jin",
-	// 	characterName: "Nerfwindw",
-	// 	region: "us",
-	// },
-	// {
-	// 	realm: "Zul'jin",
-	// 	characterName: "HealJester",
-	// 	region: "us",
-	// },
+	{
+		realm: "Zul'jin",
+		characterName: "Nerfwindw",
+		region: "us",
+	},
+	{
+		realm: "Zul'jin",
+		characterName: "HealJester",
+		region: "us",
+	},
 	{
 		realm: "Zul'Jin",
 		characterName: "Grospoilu",

@@ -60,11 +60,11 @@ export const playerList = [
 		characterName: "Grospoilu",
 		region: "us",
 	},
-	{
-		realm: "Zul'Jin",
-		characterName: "Vidéotron",
-		region: "us",
-	},
+	// {
+	// 	realm: "Zul'Jin",
+	// 	characterName: "Vidéotron",
+	// 	region: "us",
+	// },
 	{
 		realm: "Zul'Jin",
 		characterName: "Exenas",

@@ -47,7 +47,7 @@ export const fetchPlayers = async () => {
 export const playerList = [
     {
         realm: "Zul'jin",
-        characterName: "Holysheësh",
+        characterName: "GhostMist",
         region: "us",
     },
     {

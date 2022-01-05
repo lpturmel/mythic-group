@@ -70,9 +70,9 @@ export const playerList = [
         characterName: "LavalouRien",
         region: "us",
     },
-    // {
-    //     realm: "Zul'Jin",
-    //     characterName: "Exenas",
-    //     region: "us",
-    // },
+    {
+        realm: "Kil'Jaeden",
+        characterName: "Thorabb",
+        region: "us",
+    },
 ];

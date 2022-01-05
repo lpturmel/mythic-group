@@ -3,76 +3,76 @@ import { fetchPlayerData } from "./Api";
 import colors from "./Colors";
 
 export function inRange(x: number, min: any, max: any) {
-	return (x - min) * (x - max) <= 0;
+    return (x - min) * (x - max) <= 0;
 }
 
 export const getPlayerScoreColor = (player: Player) => {
-	var hexColor: string = "";
+    var hexColor: string = "";
 
-	if (!player.mythic_plus_scores) return "";
+    if (!player.mythic_plus_scores) return "";
 
-	colors.forEach((color, index) => {
-		if (
-			inRange(
-				Math.round(player.mythic_plus_scores.all),
-				color.score,
-				colors[index + 1] ? colors[index + 1].score : 0
-			)
-		) {
-			hexColor = color.rgbHex;
-		}
-	});
-	return hexColor;
+    colors.forEach((color, index) => {
+        if (
+            inRange(
+                Math.round(player.mythic_plus_scores.all),
+                color.score,
+                colors[index + 1] ? colors[index + 1].score : 0
+            )
+        ) {
+            hexColor = color.rgbHex;
+        }
+    });
+    return hexColor;
 };
 
 const cache: any = {};
 export default function useData(key: string, fetcher: Function) {
-	if (!cache[key]) {
-		let data: any;
-		let promise: Function;
-		cache[key] = () => {
-			if (data !== undefined) return data;
-			if (!promise) promise = fetcher().then((r: any) => (data = r));
-			throw promise;
-		};
-	}
-	return cache[key]();
+    if (!cache[key]) {
+        let data: any;
+        let promise: Function;
+        cache[key] = () => {
+            if (data !== undefined) return data;
+            if (!promise) promise = fetcher().then((r: any) => (data = r));
+            throw promise;
+        };
+    }
+    return cache[key]();
 }
 export const fetchPlayers = async () => {
-	return await Promise.all(
-		playerList.map((player) => fetchPlayerData(player))
-	);
+    return await Promise.all(
+        playerList.map((player) => fetchPlayerData(player))
+    );
 };
 
 export const playerList = [
-	{
-		realm: "Zul'Jin",
-		characterName: "Feljester",
-		region: "us",
-	},
-	// {
-	// 	realm: "Zul'jin",
-	// 	characterName: "Holysheësh",
-	// 	region: "us",
-	// },
-	{
-		realm: "Zul'Jin",
-		characterName: "Grospoilu",
-		region: "us",
-	},
-	// {
-	// 	realm: "Zul'Jin",
-	// 	characterName: "Vidéotron",
-	// 	region: "us",
-	// },
-	{
-		realm: "Zul'Jin",
-		characterName: "Exenas",
-		region: "us",
-	},
-	{
-		realm: "Zul'jin",
-		characterName: "Gniatsayle",
-		region: "us",
-	},
+    {
+        realm: "Zul'jin",
+        characterName: "Holysheësh",
+        region: "us",
+    },
+    {
+        realm: "Zul'Jin",
+        characterName: "Grospoilu",
+        region: "us",
+    },
+    {
+        realm: "Zul'Jin",
+        characterName: "Uttixi",
+        region: "us",
+    },
+    {
+        realm: "Zul'Jin",
+        characterName: "Liightsxo",
+        region: "us",
+    },
+    {
+        realm: "Zul'jin",
+        characterName: "LavalouRien",
+        region: "us",
+    },
+    {
+        realm: "Zul'Jin",
+        characterName: "Exenas",
+        region: "us",
+    },
 ];

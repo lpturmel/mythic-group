@@ -7,6 +7,7 @@ export interface DungeonIconProps {
 }
 
 const DungeonIcon: FunctionComponent<DungeonIconProps> = ({ dungeon }) => {
+    console.log(dungeon)
 	return <img alt={dungeon} width="32px" src={covenants[dungeon].picture} />;
 };
 

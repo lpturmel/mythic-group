@@ -31,4 +31,12 @@ export const covenants = {
 		picture: "/top.jpeg",
 		full_name: "Theatre of Pain",
 	},
+    GMBT: {
+        picture: "/gmbt.jpeg",
+        full_name: "Tazavesh: Gambit"
+    },
+    STRT: {
+        picture: "/strt.jpeg",
+        full_name: "Tazavesh: Streets of Wonder"
+    }
 };

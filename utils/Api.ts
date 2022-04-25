@@ -4,15 +4,15 @@ export const RAIDER_IO_BASE_URL = "https://raider.io/api/v1/";
 export const RAIDER_IO_URL = "https://raider.io/characters/us/";
 
 interface RaiderIoRequest {
-	realm: string;
-	characterName: string;
-	region: string;
+    realm: string;
+    characterName: string;
+    region: string;
 }
 export const fetchPlayerData = async (
-	options: RaiderIoRequest
+    options: RaiderIoRequest
 ): Promise<Player> => {
-	return fetch(
-		RAIDER_IO_BASE_URL +
-			`characters/profile?region=${options.region}&realm=${options.realm}&name=${options.characterName}&fields=mythic_plus_scores,mythic_plus_weekly_highest_level_runs,gear,covenant,mythic_plus_best_runs:current`
-	).then((res) => res.json());
+    return fetch(
+        RAIDER_IO_BASE_URL +
+            `characters/profile?region=${options.region}&realm=${options.realm}&name=${options.characterName}&fields=mythic_plus_scores,mythic_plus_weekly_highest_level_runs,covenant,mythic_plus_best_runs:current`
+    ).then((res) => res.json());
 };

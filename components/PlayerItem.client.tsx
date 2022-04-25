@@ -11,7 +11,6 @@ export interface PlayerItemProps {
 }
 
 const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
-    console.log(player);
     const scoreColor = getPlayerScoreColor(player);
 
     return (

@@ -57,12 +57,7 @@ export const playerList = [
     },
     {
         realm: "Zul'Jin",
-        characterName: "Mariiee",
-        region: "us",
-    },
-    {
-        realm: "Zul'Jin",
-        characterName: "Phacochère",
+        characterName: "Crissdenain",
         region: "us",
     },
     {

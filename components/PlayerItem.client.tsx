@@ -11,19 +11,20 @@ export interface PlayerItemProps {
 }
 
 const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
+    console.log(player);
     const scoreColor = getPlayerScoreColor(player);
 
     return (
         <details>
             <summary>
-                <div className="flex flex-col relative cursor-pointer transition-colors duration-200 hover:bg-gray-600 bg-gray-700 w-full sm:w-[400px] rounded-md shadow-lg p-4 justify-start border-2 border-gray-600">
+                <div className="relative flex w-full cursor-pointer flex-col justify-start rounded-md border-2 border-gray-600 bg-gray-700 p-4 shadow-lg transition-colors duration-200 hover:bg-gray-600 sm:w-[400px]">
                     <p
                         style={{ color: scoreColor }}
-                        className="absolute top-2 right-4 font-semibold bg-gray-900 px-2 py-1 min-w-[56px] border-2 border-gray-600 text-center rounded-md"
+                        className="absolute top-2 right-4 min-w-[56px] rounded-md border-2 border-gray-600 bg-gray-900 px-2 py-1 text-center font-semibold"
                     >
                         {Math.round(player.mythic_plus_scores?.all)}
                     </p>
-                    <div className="font-semibold absolute bottom-2 right-4 flex flex-row space-x-2">
+                    <div className="absolute bottom-2 right-4 flex flex-row space-x-2 font-semibold">
                         <p className="text-gray-200">weekly</p>
                         <p className="text-white">
                             {
@@ -38,7 +39,7 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
                             role={player.active_spec_role as DungeonRole}
                         />
                     </div>
-                    <div className="flex flex-row space-x-4 text-xl  items-center">
+                    <div className="flex flex-row items-center space-x-4  text-xl">
                         <img
                             width="64px"
                             height="64px"
@@ -54,7 +55,7 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <p className="text-white transition-colors truncate duration-200 font-semibold hover:text-green-400">
+                            <p className="truncate font-semibold text-white transition-colors duration-200 hover:text-green-400">
                                 {player.name}
                             </p>
                         </a>
@@ -62,7 +63,7 @@ const PlayerItem: FunctionComponent<PlayerItemProps> = ({ player }) => {
                             <CovenantIcon covenant={player.covenant?.name} />
                         </div>
                         <div className="absolute left-20 bottom-2 flex flex-row space-x-4">
-                            <p className="text-gray-400 text-sm truncate font-semibold">
+                            <p className="truncate text-sm font-semibold text-gray-400">
                                 Renown {player.covenant?.renown_level}
                             </p>
                         </div>

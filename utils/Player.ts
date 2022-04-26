@@ -70,4 +70,9 @@ export const playerList = [
         characterName: "Holtroll",
         region: "us",
     },
+    {
+        realm: "Zul'Jin",
+        characterName: "Jahash",
+        region: "us",
+    },
 ];

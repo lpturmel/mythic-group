@@ -72,7 +72,7 @@ export const playerList = [
     },
     {
         realm: "Zul'Jin",
-        characterName: "Holtroll",
+        characterName: "Holdwarf",
         region: "us",
     },
     {
